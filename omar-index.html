@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<html class="no-js">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>GARO ESTATE | Home page</title>
+  <meta name="description" content="GARO is a real-estate template">
+  <meta name="author" content="Kimarotec">
+  <meta name="keyword" content="html5, css, bootstrap, property, real-estate theme, bootstrap template">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Bootstrap 5 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+  <style>
+    .property-item img {
+      height: 200px;
+      object-fit: cover;
+    }
+
+    .property-item .card-body {
+      padding: 1.25rem;
+    }
+
+    .pagination {
+      justify-content: center;
+    }
+
+    .filter-btn {
+      cursor: pointer;
+    }
+  </style>
+  <style>
+    body {
+      font-family: 'Open Sans', sans-serif;
+    }
+
+    .navbar {
+      background-color: #fff;
+    }
+
+    .navbar-brand img {
+      height: 50px;
+    }
+
+    .navbar-nav .nav-link {
+      color: #000;
+    }
+
+    .navbar-nav .nav-link:hover {
+      color: #ffc107 !important;
+    }
+
+    .btn-outline-success,
+    .btn-outline-primary {
+      border-radius: 20px;
+    }
+
+    .btn-outline-success {
+      border-color: #28a745;
+      color: #28a745;
+    }
+
+    .btn-outline-success:hover {
+      background-color: #28a745;
+      color: #fff;
+    }
+
+    .btn-outline-primary {
+      border-color: #007bff;
+      color: #007bff;
+    }
+
+    .btn-outline-primary:hover {
+      background-color: #007bff;
+      color: #fff;
+    }
+
+    .carousel-item img {
+      object-fit: cover;
+      height: 100vh;
+    }
+
+    .slider-content {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background-color: rgba(255, 255, 255, 0.9);
+      padding: 30px;
+      border-radius: 15px;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+      width: 90%;
+      max-width: 800px;
+    }
+
+    .slider-content h2 {
+      color: #343a40;
+      margin-bottom: 20px;
+    }
+
+    .slider-content p {
+      color: #6c757d;
+      margin-bottom: 30px;
+    }
+
+    .form-control,
+    .form-select {
+      border-radius: 10px;
+      border: 1px solid #ced4da;
+    }
+
+    .form-control:focus,
+    .form-select:focus {
+      border-color: #007bff;
+      box-shadow: none;
+    }
+
+    .btn-primary {
+      background-color: #007bff;
+      border-color: #007bff;
+      border-radius: 10px;
+    }
+
+    .btn-primary:hover {
+      background-color: #0056b3;
+      border-color: #004085;
+    }
+
+    .footer {
+      background-color: #343a40;
+      color: #f8f9fa;
+      padding: 15px 0;
+      text-align: center;
+    }
+
+    .footer a {
+      color: #ffc107;
+    }
+
+    .footer a:hover {
+      color: #e0a800;
+    }
+
+    /* Styling for the filter toggle button */
+    .filter-toggle {
+      cursor: pointer;
+      font-size: 1.25rem;
+      font-weight: bold;
+      color: #007bff;
+      border: none;
+      background: none;
+      padding: 10px 20px;
+      margin-bottom: 20px;
+      border-radius: 25px;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+      transition: background-color 0.3s, color 0.3s;
+    }
+
+    .filter-toggle:hover {
+      background-color: #007bff;
+      color: #fff;
+    }
+
+    .filter-toggle i {
+      margin-right: 8px;
+    }
+
+    .filter-checkbox-label {
+      margin-right: 10px;
+    }
+
+    @media (max-width: 768px) {
+      .slider-content {
+        width: 95%;
+      }
+
+      .filter-toggle {
+        font-size: 1rem;
+        padding: 8px 16px;
+      }
+    }
+
+    @media (max-width: 576px) {
+      .slider-content {
+        width: 100%;
+        padding: 20px;
+      }
+
+      .filter-toggle {
+        font-size: 0.875rem;
+        padding: 6px 12px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <nav class="navbar navbar-expand-lg navbar-light">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">
+        <img src="assets/img/logo.jpg" alt="Logo">
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navigation"
+        aria-controls="navigation" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navigation">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="properties-2.html">Properties</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="user-profile.html">Your profile</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="contact.html">Contact</a>
+          </li>
+        </ul>
+
+        <div class="d-flex">
+          <button class="btn btn-outline-success me-2" onclick="window.location.href='login.html'">Login</button>
+          <button class="btn btn-outline-primary" onclick="window.location.href='submit-property.html'">Submit</button>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <div class="position-relative">
+    <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+      <div class="carousel-indicators">
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"
+          aria-current="true" aria-label="Slide 1"></button>
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
+          aria-label="Slide 2"></button>
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
+          aria-label="Slide 3"></button>
+      </div>
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img src="assets/img/slide1/slider-image-1.jpg" class="d-block w-100" alt="Mirror Edge">
+        </div>
+        <div class="carousel-item">
+          <img src="assets/img/slide1/slider-image-2.jpg" class="d-block w-100" alt="The Last of Us">
+        </div>
+        <div class="carousel-item">
+          <img src="assets/img/slide1/slider-image-4.jpg" class="d-block w-100" alt="GTA V">
+        </div>
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
+        data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
+        data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+
+    <div class="container slider-content">
+      <div class="row justify-content-center text-center">
+        <div class="col-lg-10">
+          <h2>Property Searching Just Got So Easy</h2>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi deserunt deleniti, ullam
+            commodi sit ipsam laboriosam velit adipisci quibusdam aliquam teneturo!</p>
+
+          <form class="row g-3">
+            <div class="col-md-4">
+              <input type="text" class="form-control" placeholder="Keyword">
+            </div>
+            <div class="col-md-4">
+              <select class="form-select" aria-label="Select your city">
+                <option selected>Select your city</option>
+                <option value="1">New York, CA</option>
+                <option value="2">Paris</option>
+                <option value="3">Casablanca</option>
+                <option value="4">Tokyo</option>
+                <option value="5">Marrakech</option>
+                <option value="6">Kyoto, Shibuya</option>
+              </select>
+            </div>
+            <div class="col-md-4">
+              <select class="form-select" aria-label="Property status">
+                <option selected>Status</option>
+                <option value="1">Rent</option>
+                <option value="2">Buy</option>
+                <option value="3">Used</option>
+              </select>
+            </div>
+            <div class="col-md-12">
+              <button type="submit" class="btn btn-primary w-100">Search</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Property Area -->
+  <div class="content-area recent-property py-5 bg-light">
+    <div class="container">
+      <div class="d-flex justify-content-between align-items-center mb-4">
+        <h2>Featured Properties</h2>
+        <button class="filter-toggle" type="button" data-bs-toggle="collapse" data-bs-target="#filterSection"
+          aria-expanded="false" aria-controls="filterSection">
+          <i class="fas fa-filter"></i> Filter
+        </button>
+      </div>
+      <div class="row">
+        <!-- Filter Section -->
+        <div class="collapse" id="filterSection">
+          <div class="card p-3 mb-4">
+            <h4 class="mb-3">Filters</h4>
+            <form>
+              <div class="mb-3">
+                <label for="priceRange" class="form-label">Price Range</label>
+                <input type="range" class="form-range" id="priceRange" min="0" max="1000000">
+              </div>
+              <div class="mb-3">
+                <label for="areaSize" class="form-label">Area Size (sq ft)</label>
+                <input type="range" class="form-range" id="areaSize" min="0" max="10000">
+              </div>
+              <div class="mb-3">
+                <label for="baths" class="form-label">Baths</label>
+                <select id="baths" class="form-select">
+                  <option value="" selected>Any</option>
+                  <option value="1">1</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                  <option value="4">4+</option>
+                </select>
+              </div>
+              <div class="mb-3">
+                <label for="beds" class="form-label">Beds</label>
+                <select id="beds" class="form-select">
+                  <option value="" selected>Any</option>
+                  <option value="1">1</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                  <option value="4">4+</option>
+                </select>
+              </div>
+              <div class="mb-3">
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" id="fireplace">
+                  <label class="form-check-label" for="fireplace">
+                    Fire Place
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" id="dualSinks">
+                  <label class="form-check-label" for="dualSinks">
+                    Dual Sinks
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" id="hurricaneShutters">
+                  <label class="form-check-label" for="hurricaneShutters">
+                    Hurricane Shutters
+                  </label>
+                </div>
+              </div>
+              <button type="submit" class="btn btn-primary">Apply Filters</button>
+            </form>
+          </div>
+        </div>
+
+        <!-- Filters and Sorting -->
+        <div class="row mb-4">
+          <div class="col-12 d-flex justify-content-between align-items-center mb-3">
+            <div class="d-flex align-items-center">
+              <!-- Sorting Options -->
+              <div class="me-3">
+                <ul class="list-unstyled d-flex mb-0">
+                  <li class="me-2">
+                    <a href="#" class="text-decoration-none" data-orderby="property_date" data-order="ASC">
+                      Property Date <i class="fa fa-sort-amount-asc"></i>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#" class="text-decoration-none" data-orderby="property_price" data-order="DESC">
+                      Property Price <i class="fa fa-sort-numeric-desc"></i>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+              <!-- Items Per Page -->
+              <div class="me-3">
+                <label for="items_per_page" class="mb-0"><b>Properties per page:</b></label>
+                <select id="items_per_page" name="per_page" class="form-select form-select-sm">
+                  <option value="3">3</option>
+                  <option value="6">6</option>
+                  <option value="9">9</option>
+                  <option selected="selected" value="12">12</option>
+                  <option value="15">15</option>
+                  <option value="30">30</option>
+                  <option value="45">45</option>
+                  <option value="60">60</option>
+                </select>
+              </div>
+            </div>
+            <!-- Layout Switcher -->
+            <div>
+              <a class="btn btn-outline-primary btn-sm me-2" href="#" title="List View">
+                <i class="fa fa-th-list"></i>
+              </a>
+              <a class="btn btn-primary btn-sm" href="#" title="Grid View">
+                <i class="fa fa-th"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Property Cards -->
+        <div class="row">
+          <div class="col-lg-4 col-md-6 mb-4">
+            <div class="card property-item">
+              <img src="assets/img/property1.jpg" class="card-img-top" alt="Property 1">
+              <div class="card-body">
+                <h5 class="card-title">Luxury Apartment</h5>
+                <p class="card-text">4 Beds | 3 Baths | 2500 sq ft</p>
+                <p class="card-text">$500,000</p>
+                <a href="property-detail.html" class="btn btn-primary">View Details</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6 mb-4">
+            <div class="card property-item">
+              <img src="assets/img/property2.jpg" class="card-img-top" alt="Property 2">
+              <div class="card-body">
+                <h5 class="card-title">Cozy Cottage</h5>
+                <p class="card-text">2 Beds | 1 Bath | 1200 sq ft</p>
+                <p class="card-text">$200,000</p>
+                <a href="property-detail.html" class="btn btn-primary">View Details</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6 mb-4">
+            <div class="card property-item">
+              <img src="assets/img/property3.jpg" class="card-img-top" alt="Property 3">
+              <div class="card-body">
+                <h5 class="card-title">Modern House</h5>
+                <p class="card-text">3 Beds | 2 Baths | 1800 sq ft</p>
+                <p class="card-text">$350,000</p>
+                <a href="property-detail.html" class="btn btn-primary">View Details</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Pagination -->
+        <nav aria-label="Page navigation">
+          <ul class="pagination">
+            <li class="page-item">
+              <a class="page-link" href="#" aria-label="Previous">
+                <span aria-hidden="true">&laquo;</span>
+                <span class="visually-hidden">Previous</span>
+              </a>
+            </li>
+            <li class="page-item"><a class="page-link" href="#">1</a></li>
+            <li class="page-item"><a class="page-link" href="#">2</a></li>
+            <li class="page-item"><a class="page-link" href="#">3</a></li>
+            <li class="page-item">
+              <a class="page-link" href="#" aria-label="Next">
+                <span aria-hidden="true">&raquo;</span>
+                <span class="visually-hidden">Next</span>
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- Footer -->
+  <div class="footer">
+    <p class="mb-0">© 2024 Copyright: <a href="">DEPI Team</a></p>
+  </div>
+
+  <!-- Bootstrap 5 JS Bundle -->
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"></script>
+</body>
+
+</html>
